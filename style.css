@@ -1,0 +1,1437 @@
+/* =======================================
+   RESET
+======================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#050816;
+
+    color:white;
+
+    overflow-x:hidden;
+
+}
+
+
+/* =======================================
+   VARIABLE
+======================================= */
+
+:root{
+
+    --pink:#ff5ca8;
+
+    --gold:#ffd86b;
+
+    --glass:rgba(255,255,255,.08);
+
+    --border:rgba(255,255,255,.15);
+
+}
+
+
+/* =======================================
+   LOADER
+======================================= */
+
+#loader{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#050816;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:99999;
+
+}
+
+.loader-heart{
+
+    font-size:70px;
+
+    animation:heartbeat 1s infinite;
+
+}
+
+#loader h2{
+
+    margin-top:20px;
+
+    font-weight:500;
+
+    letter-spacing:2px;
+
+}
+
+
+@keyframes heartbeat{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.2);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+
+/* =======================================
+   STARS
+======================================= */
+
+#stars{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+background-image:
+
+radial-gradient(white 1px, transparent 1px);
+
+background-size:45px 45px;
+
+opacity:.35;
+
+z-index:-3;
+
+animation:moveStars 80s linear infinite;
+
+}
+
+
+@keyframes moveStars{
+
+from{
+
+transform:translateY(0);
+
+}
+
+to{
+
+transform:translateY(-600px);
+
+}
+
+}
+
+
+/* =======================================
+   MOON
+======================================= */
+
+#moon{
+
+position:fixed;
+
+right:80px;
+
+top:70px;
+
+width:140px;
+
+height:140px;
+
+border-radius:50%;
+
+background:white;
+
+box-shadow:
+
+0 0 40px white,
+
+0 0 90px white,
+
+0 0 150px white;
+
+opacity:.9;
+
+z-index:-2;
+
+}
+
+
+/* =======================================
+   FLOATING HEARTS
+======================================= */
+
+#floating-hearts{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+width:100%;
+
+height:100%;
+
+pointer-events:none;
+
+z-index:-1;
+
+}
+
+
+/* =======================================
+   SECTION
+======================================= */
+
+section{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:100px 10%;
+
+}
+
+
+/* =======================================
+   GLASS CARD
+======================================= */
+
+.counter-card,
+.letter-card{
+
+background:var(--glass);
+
+backdrop-filter:blur(18px);
+
+border:1px solid var(--border);
+
+padding:40px;
+
+border-radius:25px;
+
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+
+}
+
+
+/* =======================================
+   TITLE
+======================================= */
+
+h1{
+
+font-size:65px;
+
+font-family:'Great Vibes',cursive;
+
+}
+
+h2{
+
+font-size:40px;
+
+margin-bottom:20px;
+
+}
+
+p{
+
+line-height:1.8;
+
+font-size:18px;
+
+color:#dddddd;
+
+}
+
+
+/* =======================================
+   BUTTON
+======================================= */
+
+button{
+
+padding:15px 35px;
+
+border:none;
+
+border-radius:50px;
+
+background:linear-gradient(45deg,#ff5ca8,#ff87c5);
+
+color:white;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+font-weight:600;
+
+margin-top:30px;
+
+}
+
+button:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 10px 30px rgba(255,92,168,.4);
+
+}
+
+
+/* =======================================
+   RESPONSIVE
+======================================= */
+
+@media(max-width:900px){
+
+h1{
+
+font-size:45px;
+
+}
+
+h2{
+
+font-size:30px;
+
+}
+
+p{
+
+font-size:16px;
+
+}
+
+section{
+
+padding:80px 30px;
+
+}
+
+}
+
+/* =======================================
+   OPENING SECTION
+======================================= */
+
+#opening{
+    position:relative;
+    text-align:center;
+}
+
+.opening-content{
+    max-width:800px;
+    padding:50px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border-radius:30px;
+    animation:fadeUp 1.2s ease;
+}
+
+#opening h2{
+    font-family:'Great Vibes',cursive;
+    font-size:60px;
+    color:var(--gold);
+}
+
+#opening h1{
+    margin:15px 0;
+    color:#fff;
+}
+
+#opening p{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+
+/* =======================================
+   HERO
+======================================= */
+
+#hero{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:80px;
+
+    flex-wrap:wrap;
+
+}
+
+.hero-left{
+
+    flex:1;
+
+}
+
+.hero-left h1{
+
+    color:var(--gold);
+
+}
+
+.hero-left h2{
+
+    color:white;
+
+    margin-top:10px;
+
+}
+
+#typing{
+
+    margin-top:30px;
+
+    font-size:20px;
+
+    max-width:550px;
+
+}
+
+
+/* =======================================
+   HERO PHOTO
+======================================= */
+
+.hero-right{
+
+    flex:1;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-right img{
+
+    width:360px;
+
+    height:480px;
+
+    object-fit:cover;
+
+    border-radius:30px;
+
+    border:4px solid rgba(255,255,255,.2);
+
+    box-shadow:
+
+        0 25px 60px rgba(0,0,0,.45),
+
+        0 0 40px rgba(255,92,168,.2);
+
+    transition:.5s;
+
+}
+
+.hero-right img:hover{
+
+    transform:scale(1.04) rotate(-1deg);
+
+}
+
+
+/* =======================================
+   COUNTER
+======================================= */
+
+#counter{
+
+    text-align:center;
+
+}
+
+#days{
+
+    font-size:70px;
+
+    color:var(--gold);
+
+    font-weight:700;
+
+    margin:20px 0;
+
+}
+
+
+/* =======================================
+   ANIMATION
+======================================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(60px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* =======================================
+   MOBILE
+======================================= */
+
+@media(max-width:900px){
+
+#hero{
+
+    flex-direction:column-reverse;
+
+    text-align:center;
+
+}
+
+.hero-right img{
+
+    width:280px;
+
+    height:380px;
+
+}
+
+#opening h2{
+
+    font-size:45px;
+
+}
+
+#days{
+
+    font-size:45px;
+
+}
+
+}
+
+/* =======================================
+   GALLERY
+======================================= */
+
+#gallery{
+
+    flex-direction:column;
+
+}
+
+#gallery h2{
+
+    margin-bottom:60px;
+
+    color:var(--gold);
+
+}
+
+.gallery{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+.gallery img{
+
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    transition:.45s;
+
+    border:2px solid rgba(255,255,255,.12);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.gallery img:hover{
+
+    transform:translateY(-10px) scale(1.03);
+
+    box-shadow:
+
+    0 20px 45px rgba(255,92,168,.35);
+
+}
+
+
+/* =======================================
+   LETTER
+======================================= */
+
+#letter{
+
+    text-align:center;
+
+}
+
+.letter-card{
+
+    max-width:850px;
+
+}
+
+.letter-card h2{
+
+    color:var(--gold);
+
+}
+
+.letter-card p{
+
+    margin-top:20px;
+
+    white-space:pre-line;
+
+}
+
+
+/* =======================================
+   CAKE
+======================================= */
+
+#cake{
+
+    flex-direction:column;
+
+}
+
+#cakeBox{
+
+    width:220px;
+
+    height:220px;
+
+    margin:40px auto;
+
+    border-radius:30px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:120px;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.5s;
+
+}
+
+#cakeBox:hover{
+
+    transform:scale(1.05);
+
+}
+
+
+/* =======================================
+   GIFT
+======================================= */
+
+#gift{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+#giftMessage{
+
+    display:none;
+
+    margin-top:40px;
+
+    padding:35px;
+
+    max-width:700px;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    animation:fadeUp .8s;
+
+}
+
+#giftMessage h3{
+
+    color:var(--gold);
+
+    font-size:35px;
+
+    margin-bottom:20px;
+
+}
+
+
+/* =======================================
+   ENDING
+======================================= */
+
+#ending{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+#ending h2{
+
+    color:var(--gold);
+
+    font-size:55px;
+
+}
+
+#ending p{
+
+    margin-top:30px;
+
+}
+
+
+/* =======================================
+   MOBILE
+======================================= */
+
+@media(max-width:900px){
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.gallery img{
+
+height:350px;
+
+}
+
+#ending h2{
+
+font-size:35px;
+
+}
+
+}
+
+/*=========================================
+        LIGHTBOX
+=========================================*/
+
+#lightbox{
+
+position:fixed;
+
+left:0;
+top:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,.92);
+
+display:none;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:999999;
+
+animation:fadeUp .4s;
+
+}
+
+#lightbox img{
+
+max-width:85%;
+
+max-height:85%;
+
+border-radius:20px;
+
+border:5px solid white;
+
+box-shadow:0 0 60px rgba(255,255,255,.25);
+
+}
+
+#closeLightbox{
+
+position:absolute;
+
+top:40px;
+
+right:60px;
+
+font-size:60px;
+
+cursor:pointer;
+
+color:white;
+
+transition:.3s;
+
+}
+
+#closeLightbox:hover{
+
+transform:rotate(180deg);
+
+color:#ff5ca8;
+
+}
+
+
+/*=========================================
+     FLOATING HEART
+=========================================*/
+
+.heart{
+
+position:fixed;
+
+bottom:-50px;
+
+font-size:25px;
+
+animation:loveFloat linear forwards;
+
+pointer-events:none;
+
+z-index:100;
+
+}
+
+@keyframes loveFloat{
+
+0%{
+
+transform:translateY(0) scale(0);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+
+/*=========================================
+     SHOOTING STAR
+=========================================*/
+
+.star{
+
+position:fixed;
+
+width:3px;
+
+height:3px;
+
+background:white;
+
+box-shadow:0 0 15px white;
+
+animation:shoot 2.5s linear forwards;
+
+}
+
+@keyframes shoot{
+
+0%{
+
+transform:translate(0,0);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translate(-500px,350px);
+
+opacity:0;
+
+}
+
+}
+
+/*=========================================
+      MUSIC BUTTON
+=========================================*/
+
+#music-control{
+
+position:fixed;
+
+right:30px;
+
+bottom:30px;
+
+width:65px;
+
+height:65px;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:26px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(20px);
+
+cursor:pointer;
+
+z-index:9999;
+
+transition:.4s;
+
+border:1px solid rgba(255,255,255,.2);
+
+}
+
+#music-control:hover{
+
+transform:scale(1.1);
+
+background:#ff5ca8;
+
+}
+
+
+
+/*=========================================
+      COUNTER
+=========================================*/
+
+#timeCounter{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+margin-top:30px;
+
+flex-wrap:wrap;
+
+}
+
+#timeCounter div{
+
+width:120px;
+
+padding:20px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.07);
+
+backdrop-filter:blur(20px);
+
+}
+
+#timeCounter span{
+
+font-size:45px;
+
+font-weight:bold;
+
+color:var(--gold);
+
+}
+
+#timeCounter p{
+
+margin-top:8px;
+
+}
+
+
+
+/*=========================================
+      SCROLL BAR
+=========================================*/
+
+#progressBar{
+
+position:fixed;
+
+left:0;
+
+top:0;
+
+height:5px;
+
+background:#ff5ca8;
+
+width:0%;
+
+z-index:99999;
+
+box-shadow:0 0 20px #ff5ca8;
+
+}
+
+
+
+/*=========================================
+      REVEAL
+=========================================*/
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(100px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* =======================================
+   FIREWORK CANVAS
+======================================= */
+
+#fireworks{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    z-index:5;
+}
+
+/* =======================================
+   CURSOR GLOW
+======================================= */
+
+#cursorGlow{
+
+position:fixed;
+
+width:25px;
+height:25px;
+
+border-radius:50%;
+
+background:#ff5ca8;
+
+filter:blur(12px);
+
+pointer-events:none;
+
+z-index:999999;
+
+transition:.05s;
+
+}
+
+/* =======================================
+   COUNTDOWN
+======================================= */
+
+#birthdayCountdown{
+
+margin-top:60px;
+
+padding:30px;
+
+text-align:center;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border-radius:20px;
+
+}
+
+#countdown{
+
+margin-top:20px;
+
+font-size:25px;
+
+font-weight:bold;
+
+color:var(--gold);
+
+}
+
+#countdown span{
+
+font-size:40px;
+
+margin:0 8px;
+
+}
+
+/*=====================================
+ ENVELOPE
+=====================================*/
+
+.envelope{
+
+width:340px;
+
+height:220px;
+
+margin:auto;
+
+position:relative;
+
+cursor:pointer;
+
+perspective:1000px;
+
+}
+
+.cover{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+background:#ff5ca8;
+
+clip-path:polygon(0 0,100% 0,50% 55%);
+
+transition:1s;
+
+z-index:3;
+
+}
+
+.letter-paper{
+
+position:absolute;
+
+left:10px;
+
+top:10px;
+
+width:320px;
+
+height:200px;
+
+background:white;
+
+color:#333;
+
+padding:20px;
+
+border-radius:10px;
+
+overflow:auto;
+
+transform:translateY(0);
+
+transition:1s;
+
+}
+
+.envelope.open .cover{
+
+transform:rotateX(180deg);
+
+transform-origin:top;
+
+}
+
+.envelope.open .letter-paper{
+
+transform:translateY(-140px);
+
+}
+
+
+
+/*=====================================
+ TIMELINE
+=====================================*/
+
+#timeline{
+
+flex-direction:column;
+
+}
+
+.timeline{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+width:100%;
+
+margin-top:50px;
+
+}
+
+.box{
+
+padding:30px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+transition:.4s;
+
+}
+
+.box:hover{
+
+transform:translateY(-10px);
+
+}
+
+@media(max-width:900px){
+
+.timeline{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@keyframes fall{
+
+0%{
+
+transform:translateY(-50px) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(110vh) rotate(720deg);
+
+}
+
+}
+
+/*=========================================
+        FINAL GIFT
+=========================================*/
+
+#finalGift{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+#giftBox{
+
+font-size:140px;
+
+cursor:pointer;
+
+transition:.6s;
+
+margin:40px;
+
+}
+
+#giftBox:hover{
+
+transform:scale(1.1) rotate(10deg);
+
+}
+
+#openGift{
+
+margin-top:20px;
+
+}
+
+#finalMessage{
+
+display:none;
+
+margin-top:50px;
+
+padding:40px;
+
+max-width:850px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border-radius:25px;
+
+animation:fadeUp 1s;
+
+}
+
+#finalMessage h1{
+
+font-family:"Great Vibes",cursive;
+
+font-size:65px;
+
+color:var(--gold);
+
+margin-bottom:20px;
+
+}
+
+#finalMessage h3{
+
+margin-top:40px;
+
+color:#ff8fc5;
+
+}
+
+#slider{
+
+overflow-x:auto;
+
+display:flex;
+
+gap:25px;
+
+scroll-behavior:smooth;
+
+padding-bottom:20px;
+
+}
+
+#slider::-webkit-scrollbar{
+
+display:none;
+
+}
+
+#slider img{
+
+min-width:320px;
+
+}
